@@ -1,2 +1,2 @@
 # bookbot
-Bookbot is a python project.
+My first project
