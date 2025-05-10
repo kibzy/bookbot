@@ -48,7 +48,8 @@ def sort_on(dict):
 
 def print_report(list):
     for item in list:
-        print(f"The '{item["name"]}' character was found {item["count"]} times")
+        # print(f"The '{item["name"]}' character was found {item["count"]} times")
+        print(f'{item["name"]}: {item["count"]}')
 
 
 main()
