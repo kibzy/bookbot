@@ -1,3 +1,5 @@
+from stats import get_num_words
+
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
@@ -5,14 +7,10 @@ def main():
     character_dict = count_letters(text)
     list_dict = convert_charact_dict(character_dict)
     list_dict.sort(reverse=True, key=sort_on)
-    print(f"--- Begin report of {book_path} ---") 
+    print(f"--- Begin report of {book_path} ---")
     print(f"{num_words} words found in the document\n")
     print_report(list_dict)
-    print(f"--- End report ---")
-
-def get_num_words(text):
-    words = text.split()
-    return len(words)
+    print("--- End report ---")
 
 
 def get_book_text(path):
@@ -29,7 +27,6 @@ def count_letters(string):
             letter_dict[lowered_letter] = 1
     # print(letter_dict)
     return letter_dict
-
 
 def convert_charact_dict(dict):
     dict_list = []
